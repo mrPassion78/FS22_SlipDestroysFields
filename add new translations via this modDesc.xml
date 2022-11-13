@@ -5,6 +5,7 @@
         <en>Slip Destroys Fields</en>
         <fr>Glissement Détruit Les Champs</fr>
 	<ru>Пробуксовка Разрушает Поля</ru>
+	<nl>Slip vernietigt velden</nl>
     </title>
     <description>
         <de>
@@ -46,7 +47,6 @@ Changelog Version 1.0.0.2:
 - Dedicated Server Probleme (Lua-Callstack) behoben. Sorry!
 - Beschreibung angepasst
 - Russische Übersetzung hinzugefügt
-- Probleme behoben, bei denen der Boden außerhalb des Feldes zerstört wurde
 
 Changelog Version 1.0.0.3:
 - Hinzugefügt, dass in den Spieleinstellungen eingestellt werden kann, ob auch der Feldrand zerstört werden soll, oder nur die Bereiche, in denen sich tatsächlich Ackerboden befindet.
@@ -96,7 +96,6 @@ Changelog Version 1.0.0.2:
 - Dedicated server problems (Lua callstack) fixed. Sorry!
 - Description adapted
 - Russian translation added
-- Fixed problems where the ground outside the field was destroyed
 
 Changelog Version 1.0.0.3:
 - Added the ability to set in the game settings whether the field edge should also be destroyed, or only the areas where there is actually arable soil
@@ -146,7 +145,6 @@ Changelog Version 1.0.0.2 :
 - Problèmes de serveur dédié (Lua callstack) corrigés. Désolé !
 - Description adaptée
 - Ajout d'une traduction en russe
-- Correction des problèmes où le sol à l'extérieur du champ était détruit
 
 Changelog Version 1.0.0.3 :
 - Ajout de la possibilité de définir dans les paramètres du jeu si le bord du champ doit également être détruit, ou seulement les zones où il y a effectivement un sol arable
@@ -186,7 +184,7 @@ Prévu pour les futures mises à jour :
 ChangeLog 1.0.0.1:
 - Удален нежелательный текст отладки, который появлялся с дополнительными колесами и скольжением
 - Добавлены частицы, летящие когда колесо пробуксовывает
-- Добавлена возможность настройки отображения текста, когда почва разрушается
+- Добавлена ​​возможность настройки отображения текста, когда почва разрушается
 - Добавлено уведомление, которое показывает, что настройки были изменены
 - Исправлены проблемы в многопользовательской игре
 - Исправлены проблемы при игре на выделенном сервере
@@ -197,7 +195,6 @@ ChangeLog 1.0.0.2:
 - Исправлены проблемы при игре на выделенном сервере (Lua Callstack). Извиняюсь!
 - Адаптировано описание
 - Добавлен русский перевод
-- Исправлены проблемы, когда земля за пределами поля разрушалась
 
 Changelog Version 1.0.0.3:
 -
@@ -208,6 +205,54 @@ Changelog Version 1.0.0.3:
 - Мод деактивируется в миссиях (не уверен)
     ]]>	
 	</ru>
+<nl>
+<![CDATA[In werkelijkheid, wanneer de banden van een voertuig op het veld of op gras te snel draaien, begint de grond te scheuren. Met deze mod kan dit nu ook in virtuele landbouw worden gesimuleerd, zodat bijvoorbeeld grasland moet worden ingezaaid met een wieder, die een zaaimachine heeft, of de juiste banden moeten worden gebruikt in natte omstandigheden.
+
+In de spelinstellingen kan de sterkte van de vernietiging worden geselecteerd om altijd de optimale hoeveelheid vernietiging te krijgen in elke situatie, of bij het spelen met mods die de banden beïnvloeden (bijv. REA Wheels).
+Evenzo kunt u instellen of u gewaarschuwd wilt worden door een knipperende tekst wanneer de grond wordt vernietigd.
+
+De volgende opties zijn beschikbaar:
+
+- Klein
+- Gemiddeld (aanbevolen)
+- Veel
+- Geen
+
+  - Wanneer de grond is vernietigd, verandert de status van het betreffende veld in "Gecultiveerd". Dit wordt visueel weergegeven door de textuur van de cultivator en deeltjes achter de wielen.
+  - In het bestand registerSlipDestroysFields.lua is een tutorial beschikbaar voor het aanpassen van de sterke punten.
+  - Als u vragen, verzoeken of problemen heeft, neem dan gerust contact op met het volgende e-mailadres: SlipDestroysFields@web.de
+  - Er is ook een GitHub-repository beschikbaar voor de nieuwste updates en directe ondersteuning: https://github.com/Frvetz/FS22_SlipDestroysFields
+
+
+#Volledige lokale multiplayer en dedicated serverondersteuning#
+
+#Changelog#
+Info: Als je de mod zelf hebt bewerkt, zul je deze na een update opnieuw moeten bewerken.
+ 
+Changelog-versie 1.0.0.1:
+- Ongewenste foutopsporingstekst verwijderd die verscheen met extra wielen en slip
+- Toegevoegde deeltjes wanneer de wielen doorslippen
+- De mogelijkheid toegevoegd om in de spelinstellingen in te stellen of een knipperende tekst aangeeft wanneer de grond wordt vernietigd
+- Een melding toegevoegd die laat zien wanneer instellingen zijn gewijzigd
+- Problemen met meerdere spelers opgelost
+- Dedicated server problemen opgelost
+- REA_gui weergaveproblemen opgelost
+- Algemene kleine problemen in combinatie met REA-Mod opgelost
+
+Changelog-versie 1.0.0.2:
+- Dedicated server problemen (Lua callstack) opgelost. Sorry!
+- Beschrijving aangepast
+- Russische vertaling toegevoegd
+
+Changelog-versie 1.0.0.3:
+- De mogelijkheid toegevoegd om in de spelinstellingen in te stellen of de veldrand ook moet worden vernietigd, of alleen de gebieden waar daadwerkelijk bouwgrond is
+
+Gepland voor toekomstige updates:
+- Instellingen kunnen door elke speler afzonderlijk worden gekozen in multiplayer
+- Stenen verschijnen minder op plaatsen met slippen (niet zeker)
+- Mod is gedeactiveerd in missies (niet zeker)
+]]>
+</nl>
     </description>
     <author>frvetz</author>
     <version>1.0.0.3</version>
@@ -217,176 +262,196 @@ Changelog Version 1.0.0.3:
 		<sourceFile filename="registerSlipDestroysFields.lua" />
     </extraSourceFiles>
 	
-	<l10n>
-        <text name="title_SlipDestroysFields">
-			<de>Schlupf Zerstört Felder</de>
-			<en>Slip Destroys Fields</en>
-			<fr>Glissement Détruit Les Champs</fr>
-			<ru>Пробуксовка разрушает поля</ru>
-		</text>
-		<text name="setting_SlipDestroysFields">
-			<de>Zerstörungsstärke</de>
-			<en>Destruction strength</en>
-			<fr>Puissance de destruction</fr>
-			<ru>Сила разрушения</ru>
-		</text>
-		<text name="explanation_SlipDestroysFields">
-			<de>Legt fest wie stark die Felder zerstört werden.</de>
-			<en>Determines how much the fields are destroyed.</en>
-			<fr>Détermine le degré de destruction des cases.</fr>
-			<ru>Определяет, насколько будут разрушаться поля.</ru>
-		</text>
-		
-		<text name="selection_SlipDestroysFields_Light">
-			<de>Wenig</de>
-			<en>Little</en>
-			<fr>Peu</fr>
-			<ru>Слабо</ru>
-		</text>
-		<text name="selection_SlipDestroysFields_Medium">
-			<de>Mittelmäßg (empfohlen)</de>
-			<en>Medium (recommended)</en>
-			<fr>Moyen (recommandé)</fr>
-			<ru>Средне (рекомендовано)</ru>
-		</text>
-		<text name="selection_SlipDestroysFields_Heavy">
-			<de>Viel</de>
-			<en>Much</en>
-			<fr>Beaucoup</fr>
-			<ru>Сильно</ru>
-		</text>
-		<text name="selection_SlipDestroysFields_None">
-			<de>Keine</de>
-			<en>None</en>
-			<fr>Aucune</fr>
-			<ru>Отключить</ru>
-		</text>
-		
-		
-		
-		
-		
-		<text name="setting_SlipDestroysFields_Debug">
-			<de>Debug</de>
-			<en>Debug</en>
-			<fr>Debug</fr>
-			<ru>Отладка</ru>
-		</text>
-		<text name="explanation_SlipDestroysFields_Debug">
-			<de>Legt fest, ob ein Text erscheint, wenn der Boden zerstört wird.</de>
-			<en>Determines whether a text appears when the floor is destroyed.</en>
-			<fr>Détermine si un texte apparaît lorsque l'étage est détruit.</fr>
-			<ru>Должен ли появляется текст, когда разрушается почва.</ru>
-		</text>
-		
-		<text name="selection_SlipDestroysFields_DebugTrue">
-			<de>Ja</de>
-			<en>Yes</en>
-			<fr>Oui</fr>
-			<ru>Да</ru>
-		</text>
-		<text name="selection_SlipDestroysFields_DebugFalse">
-			<de>Nein</de>
-			<en>No</en>
-			<fr>Non</fr>
-			<ru>Нет</ru>
-		</text>
-		
-		
-		
-		
-		
-		<text name="setting_SlipDestroysFields_Destruction">
-			<de>Zerstörung außerhalb des Feldes</de>
-			<en>Destruction outside the field</en>
-			<fr>Destruction en dehors du champ</fr>
-			<ru>-</ru>
-		</text>
-		<text name="explanation_SlipDestroysFields_Destruction">
-			<de>Legt fest, ob auch der Feldrand zerstört werden soll, oder nur die Bereiche, in denen sich tatsächlich Ackerboden befindet.</de>
-			<en>Determines whether the field edge should also be destroyed, or only the areas where there is actually arable soil.</en>
-			<fr>Détermine si le bord du champ doit également être détruit, ou seulement les zones où il y a effectivement un sol arable.</fr>
-			<ru>-</ru>
-		</text>
-		
-		<text name="selection_SlipDestroysFields_DestructionTrue">
-			<de>Ja</de>
-			<en>Yes</en>
-			<fr>Oui</fr>
-			<ru>Да</ru>
-		</text>
-		<text name="selection_SlipDestroysFields_DestructionFalse">
-			<de>Nein</de>
-			<en>No</en>
-			<fr>Non</fr>
-			<ru>Нет</ru>
-		</text>
-		
-		
-		
-		
-		
-		<text name="warning_Destruction">
-			<de>Schlupf Zerstört Felder: Boden wird zerstört!</de>
-			<en>Slip Destroys Fields: Ground is being destroyed!</en>
-			<fr>Glissement Détruit Les Champs : Le sol est en train d'être détruit !</fr>
-			<ru>Пробуксовка разрушает поля: Почва начинает разрушаться.</ru>
-		</text>
-		<text name="ModName">
-			<de>Schlupf Zerstört Felder</de>
-			<en>Slip Destroys Fields</en>
-			<fr>Glissement Détruit Les Champs</fr>
-			<ru>Пробуксовка разрушает поля</ru>
-		</text>
-		<text name="SettingStrengthChanged">
-			<de>Zerstörungsstärke geändert auf</de>
-			<en>Destruction strength changed to</en>
-			<fr>La force de destruction a été changée en</fr>
-			<ru>Сила разрушения изменена для</ru>
-		</text>
-		<text name="SettingDebugChanged">
-			<de>Debug geändert auf</de>
-			<en>Debug changed to</en>
-			<fr>Debug changée en</fr>
-			<ru>Канал отладки для</ru>
-		</text>
-		<text name="SettingDestructionChanged">
-			<de>Zerstörung außerhalb des Feldes geändert auf</de>
-			<en>Destruction outside the field changed to</en>
-			<fr>Destruction en dehors du champ changée en</fr>
-			<ru>Канал отладки для</ru>
-		</text>
-	</l10n>
+<l10n>
+	<text name="title_SlipDestroysFields">
+		<de>Schlupf Zerstört Felder</de>
+		<en>Slip Destroys Fields</en>
+		<fr>Glissement Détruit Les Champs</fr>
+		<ru>Пробуксовка разрушает поля</ru>
+		<nl>Slip vernietigt velden</nl>
+	</text>
+	<text name="setting_SlipDestroysFields">
+		<de>Zerstörungsstärke</de>
+		<en>Destruction strength</en>
+		<fr>Puissance de destruction</fr>
+		<ru>Сила разрушения</ru>
+		<nl>Vernietigingskracht</nl>
+	</text>
+	<text name="explanation_SlipDestroysFields">
+		<de>Legt fest wie stark die Felder zerstört werden.</de>
+		<en>Determines how much the fields are destroyed.</en>
+		<fr>Détermine le degré de destruction des cases.</fr>
+		<ru>Определяет, насколько будут разрушаться поля.</ru>
+		<nl>Bepaalt hoeveel de velden worden vernietigd..</nl>
+	</text>
+
+	<text name="selection_SlipDestroysFields_Light">
+		<de>Wenig</de>
+		<en>Little</en>
+		<fr>Peu</fr>
+		<ru>Слабо</ru>
+		<nl>Weinig</nl>
+	</text>
+	<text name="selection_SlipDestroysFields_Medium">
+		<de>Mittelmäßg (empfohlen)</de>
+		<en>Medium (recommended)</en>
+		<fr>Moyen (recommandé)</fr>
+		<ru>Средне (рекомендовано)</ru>
+		<nl>Gemiddeld (Aanbevolen)</nl>
+	</text>
+	<text name="selection_SlipDestroysFields_Heavy">
+		<de>Viel</de>
+		<en>Much</en>
+		<fr>Beaucoup</fr>
+		<ru>Сильно</ru>
+		<nl>Veel</nl>
+	</text>
+	<text name="selection_SlipDestroysFields_None">
+		<de>Keine</de>
+		<en>None</en>
+		<fr>Aucune</fr>
+		<ru>Отключить</ru>
+		<nl>Geen</nl>
+	</text>
+
+
+
+
+
+	<text name="setting_SlipDestroysFields_Debug">
+		<de>Debug</de>
+		<en>Debug</en>
+		<fr>Debug</fr>
+		<ru>Отладка</ru>
+		<nl>Debug</nl>
+	</text>
+	<text name="explanation_SlipDestroysFields_Debug">
+		<de>Legt fest, ob ein Text erscheint, wenn der Boden zerstört wird.</de>
+		<en>Determines whether a text appears when the floor is destroyed.</en>
+		<fr>Détermine si un texte apparaît lorsque l'étage est détruit.</fr>
+		<ru>Должен ли появляется текст, когда разрушается почва.</ru>
+		<nl>Bepaalt of een tekst verschijnt wanneer het veld wordt vernietigd.</nl>
+	</text>
+
+	<text name="selection_SlipDestroysFields_DebugTrue">
+		<de>Ja</de>
+		<en>Yes</en>
+		<fr>Oui</fr>
+		<ru>Да</ru>
+		<nl>Ja</nl>
+	</text>
+	<text name="selection_SlipDestroysFields_DebugFalse">
+		<de>Nein</de>
+		<en>No</en>
+		<fr>Non</fr>
+		<ru>Нет</ru>
+		<nl>Nee</nl>
+	</text>
+
+
+
+
+
+	<text name="setting_SlipDestroysFields_Destruction">
+		<de>Zerstörung außerhalb des Feldes</de>
+		<en>Destruction outside the field</en>
+		<fr>Destruction en dehors du champ</fr>
+		<ru>-</ru>
+		<nl>Vernietiging buiten het veld</nl>
+	</text>
+	<text name="explanation_SlipDestroysFields_Destruction">
+		<de>Legt fest, ob auch der Feldrand zerstört werden soll, oder nur die Bereiche, in denen sich tatsächlich Ackerboden befindet.</de>
+		<en>Determines whether the field edge should also be destroyed, or only the areas where there is actually arable soil.</en>
+		<fr>Détermine si le bord du champ doit également être détruit, ou seulement les zones où il y a effectivement un sol arable.</fr>
+		<ru>-</ru>
+		<nl>Bepaalt of de veldrand ook vernietigd moet worden, of alleen de gebieden waar daadwerkelijk landbouwgrond aanwezig is.</nl>
+	</text>
+
+	<text name="selection_SlipDestroysFields_DestructionTrue">
+		<de>Ja</de>
+		<en>Yes</en>
+		<fr>Oui</fr>
+		<ru>Да</ru>
+		<nl>Ja</nl>
+	</text>
+	<text name="selection_SlipDestroysFields_DestructionFalse">
+		<de>Nein</de>
+		<en>No</en>
+		<fr>Non</fr>
+		<ru>Нет</ru>
+		<nl>Nee</nl>
+	</text>
+
+
+
+
+
+	<text name="warning_Destruction">
+		<de>Schlupf Zerstört Felder: Boden wird zerstört!</de>
+		<en>Slip Destroys Fields: Ground is being destroyed!</en>
+		<fr>Glissement Détruit Les Champs : Le sol est en train d'être détruit !</fr>
+		<ru>Пробуксовка разрушает поля: Почва начинает разрушаться.</ru>
+		<nl>slip vernietigt velden: grond wordt vernietigd!</nl>
+	</text>
+	<text name="ModName">
+		<de>Schlupf Zerstört Felder</de>
+		<en>Slip Destroys Fields</en>
+		<fr>Glissement Détruit Les Champs</fr>
+		<ru>Пробуксовка разрушает поля</ru>
+		<nl>Slip vernietigt velden</nl>
+	</text>
+	<text name="SettingStrengthChanged">
+		<de>Zerstörungsstärke geändert auf</de>
+		<en>Destruction strength changed to</en>
+		<fr>La force de destruction a été changée en</fr>
+		<ru>Сила разрушения изменена для</ru>
+		<nl>Vernietigingssterkte veranderd in</nl>
+	</text>
+	<text name="SettingDebugChanged">
+		<de>Debug geändert auf</de>
+		<en>Debug changed to</en>
+		<fr>Debug changée en</fr>
+		<ru>Канал отладки для</ru>
+		<nl>Debug veranderd in</nl>
+	</text>
+	<text name="SettingDestructionChanged">
+		<de>Zerstörung außerhalb des Feldes geändert auf</de>
+		<en>Destruction outside the field changed to</en>
+		<fr>Destruction en dehors du champ changée en</fr>
+		<ru>Канал отладки для</ru>
+		<nl>Vernietiging buiten het veld veranderd in</nl>
+	</text>
+</l10n>
 </modDesc>
 
 [!THIS WOULD NEED TO BE TRANSLATED AS WELL!]
 
-##English##
+##Nederlands##
 
--Step-To-Step Guide for adjusting the values-
+-Stap-To-Step Gids voor het aanpassen van de waarden-
 
-	- 1. Unzip the mod
+- 1. Pak de mod uit
 
-	- 2. Open the file "registerSlipDestroysFields.lua"
+- 2. Open het bestand "registerSlipDestroysFields.lua"
 
-	- 3. Look for the lines 	'registerSlipDestroysFields.Strength = 1.8		-- Option "Little Destruction" '		at the end of the script (lines 229-233)
-								'registerSlipDestroysFields.Strength = 1.65 	-- Option "Medium Destruction" '
-								'registerSlipDestroysFields.Strength = 1.5 		-- Option "Much Destruction" '
+- 3. Zoek naar de regels 'registerSlipDestroysFields.Strength = 1.8 -- Option "Little Destruction" ' aan het einde van het script (regels 229-233)
+'registerSlipDestroysFields.Strength = 1.65 -- Optie "Medium Destruction" '
+'registerSlipDestroysFields.Strength = 1.5 -- Optie "Veel vernietiging" '
 
-	- 4. 
-		1. Change the number "1.8" in line 229 		 (registerSlipDestroysFields.Strength = 1.8   	-- Option "Little Destruction") to change the destruction amount for the selected option "Little Destruction".
+- 4.
+1. Wijzig het nummer "1.8" in regel 229 (registerSlipDestroysFields.Strength = 1.8 -- Option "Little Destruction") om de vernietigingswaarden voor de geselecteerde optie "Little Destruction" te wijzigen.
 
-		2.  Change the number "1.65" in line 231	 (registerSlipDestroysFields.Strength = 1.65  	-- Option "Medium Destruction") to change the destruction amount for the selected option "Medium Destruction".
+2. Wijzig het nummer "1.65" in regel 231 (registerSlipDestroysFields.Strength = 1.65 -- Optie "Medium Destruction") om de vernietigingswaarden voor de geselecteerde optie "Medium Destruction" te wijzigen.
 
-		3.  Change the number "1.8" in line 233      (registerSlipDestroysFields.Strength = 1.8 	-- Option "Much Destruction") to change the destruction amount for the selected option "Much Destruction".
+3. Wijzig het nummer "1.8" in regel 233 (registerSlipDestroysFields.Strength = 1.8 -- Optie "Much Destruction") om de vernietigingswaarden te wijzigen voor de geselecteerde optie "Much Destruction".
 
 
-		!The numbers are very sensitive and do not need to be changed much to notice a change. Even a change of 0.1 has a remarkable impact!
+!De cijfers zijn erg gevoelig en hoeven niet veel veranderd te worden om een verandering op te merken. Zelfs een verandering van 0,1 heeft een opmerkelijke impact!
 
-	- 5. Save the edited file
-	
-	- 6. Zip the mod
-	
-	- 7. Insert the now zipped mod into your mod folder
-	
-	- 8. Delete the unzipped version of the mod
+- 5. Sla het bewerkte bestand op
+
+- 6. Zip de mod
+
+- 7. Plaats de nu gezipte mod in je mod-map
+
+- 8. Verwijder de uitgepakte versie van de mod
